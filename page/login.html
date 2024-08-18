@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - My Blog</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login to My Blog</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+
+        <p class="or-divider">OR</p>
+
+        <div class="social-login">
+            <button id="googleLogin" class="social-btn google">
+                <img src="../assets/icons/google.svg" alt="Google Icon"> Login with Google
+            </button>
+            <button id="githubLogin" class="social-btn github">
+                <img src="../assets/icons/github.svg" alt="GitHub Icon"> Login with GitHub
+            </button>
+        </div>
+
+        <p class="link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+
+    <script type="module" src="../scripts/auth.js"></script>
+</body>
+
+</html>

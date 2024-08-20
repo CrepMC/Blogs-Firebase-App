@@ -40,10 +40,14 @@ function createPostElement(id, post) {
   const article = document.createElement('article');
   article.className = 'blog-post';
   article.innerHTML = `
-    <img src="${post.imageUrl || 'placeholder-image-url.jpg'}" alt="${post.title}">
+    <img src="${
+      post.imageUrl || 'https://placehold.co/150x150/FFF/FFF'
+    }" alt="${post.title}">
     <div class="post-content">
       <h2>${post.title}</h2>
-      <div class="post-meta">Created on ${post.createdAt.toDate().toLocaleDateString()}</div>
+      <div class="post-meta">Created on ${post.createdAt
+        .toDate()
+        .toLocaleDateString()}</div>
       <p class="post-excerpt">${post.content.substring(0, 150)}...</p>
       <a href="post-detail.html?id=${id}" class="read-more">Read More</a>
       <a href="edit-post.html?id=${id}" class="edit-post">Edit</a>
